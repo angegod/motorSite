@@ -1,0 +1,131 @@
+.Product_main_sections{
+    width: 80%;
+    padding-top: 100px;
+    height: auto;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu{
+    position: fixed;
+}
+
+.title{
+    position: relative;
+    animation: product_title_fadeIn 0.8s;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.subtitle{
+    color:brown;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.productBox{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    min-width: 200px;
+}
+.productName{
+    width: 60%;
+    margin-left:auto;
+    margin-right: auto;
+}
+.productPrice{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+
+.row{
+    margin-top: 20px;
+    position: relative;
+    animation: row_left_fadeIn 1s;
+    transition: 0.5s;
+     
+}
+
+.motorComponent{
+    animation-iteration-count: 1;
+}
+
+.carComponent{
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    animation-iteration-count: 1;
+}
+
+button a{
+    color: white;
+    font-weight: bold;
+}
+
+
+.buttons_group button{
+    border: gray;
+    background-color: gray;
+    margin-right: 10px;
+    background: linear-gradient(to left, red 50%, #0d6efd 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+.buttons_group button:hover{
+    background-position: left;
+}
+img{
+    transition: 0.2s linear;
+}
+
+img.down{
+    transform: translateY(-50%);
+    transition: 0.2s linear;
+}
+
+.buttons_group{
+    margin-left: 20px;
+}
+
+/*animation*/
+
+@keyframes product_title_fadeIn{
+    0%{
+        top:-100px;
+        opacity: 0;
+    }
+
+    100%{
+        top:0px;
+        opacity: 1;
+    }
+}
+
+@keyframes row_left_fadeIn{
+    0%{
+        left:-100%;
+       
+    }
+    50%{
+        opacity: 0.5s;
+    }
+    100%{
+        left:0%;
+        opacity:1;
+    }
+}
+
+
+
