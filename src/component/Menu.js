@@ -35,16 +35,16 @@ function Menu(){
     return(<>
         <div className='menu' id="menu" style={{position:'fixed',zIndex:9999}}>
             <ul>
-                <li><Link reloadDocument to="/motorSite/Home">主頁</Link></li>
-                <li><Link reloadDocument to="/motorSite/About">關於我們</Link></li>
-                <li><Link reloadDocument to="/motorSite/Product">產品</Link></li>
+                <li><Link reloadDocument to="/Home">主頁</Link></li>
+                <li><Link reloadDocument to="/About">關於我們</Link></li>
+                <li><Link reloadDocument to="/Product">產品</Link></li>
             </ul>
         </div>
         
         <Routes>
-            <Route exact path="/motorSite/Home" element={<App/>} />
-            <Route exact path="/motorSite/About" element={<About/>} />
-            <Route exact path="/motorSite/Product" element={<Product/>} />
+            <Route exact path="/Home" element={<App/>} />
+            <Route exact path="/About" element={<About/>} />
+            <Route exact path="/Product" element={<Product/>} />
         </Routes>
         
     </>)
