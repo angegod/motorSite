@@ -1,12 +1,18 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import Footer from '../component/Footer';
 import '../css/about.css';
+import { useLocation } from 'react-router-dom';
 
 
 function About(){
-    window.onload=function(){
+    const location=useLocation();
+    useEffect(() => {
+        // execute on location change
+        
+        console.log('Location changed!', location.pathname);
         document.getElementById('aboutSections').classList.add('shows');
-    }
+    }, [location]);
+
     
     
     return(<>
