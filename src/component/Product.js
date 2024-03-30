@@ -7,27 +7,9 @@ import img1 from '../images/ficon1.webp';
 import Footer from './Footer';
 
 function Product(){
-
-    window.onscroll=function(){/*當螢幕滾動時，偵測產品行是否出現在視窗視野中 */
-        var productRows=document.querySelectorAll(".row");
-        
-        productRows.forEach((row,index)=>{
-            var rect = row.getBoundingClientRect();
-            var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-
-            if(rect.bottom < 200 || rect.top - viewHeight >=-200){
-                row.classList.remove("fadeIn");
-            }else{
-                row.classList.add("fadeIn");
-            }
-
-            
-        })
-
-    }
-
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
+
 
     function clickHandle(element){
         setMessage(element.productName);
