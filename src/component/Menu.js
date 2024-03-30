@@ -35,9 +35,9 @@ function Menu(){
     return(<>
         <div className='menu' id="menu" style={{position:'fixed',zIndex:9999}}>
             <ul>
-                <li><Link reloadDocument to="/Home">主頁</Link></li>
-                <li><Link reloadDocument to="/About">關於我們</Link></li>
-                <li><Link reloadDocument to="/Product">產品</Link></li>
+                <li><Link  to="/Home">主頁</Link></li>
+                <li><Link  to="/About">關於我們</Link></li>
+                <li><Link  to="/Product">產品</Link></li>
             </ul>
         </div>
         
