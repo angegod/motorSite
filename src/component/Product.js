@@ -8,6 +8,24 @@ import Footer from './Footer';
 
 function Product(){
 
+    window.onscroll=function(){/*當螢幕滾動時，偵測產品行是否出現在視窗視野中 */
+        var productRows=document.querySelectorAll(".row");
+        
+        productRows.forEach((row,index)=>{
+            var rect = row.getBoundingClientRect();
+            var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+
+            if(rect.bottom < 200 || rect.top - viewHeight >=-200){
+                row.classList.remove("fadeIn");
+            }else{
+                row.classList.add("fadeIn");
+            }
+
+            
+        })
+
+    }
+
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
 
@@ -61,7 +79,6 @@ function Product(){
     function SubRow({index,category}){/*一個商品區塊 透過flex能達到自動換行 */
         var content=JsonFile[index];
         
-
         const lists=content.product.map((element,i)=><>
             <div className='productBox' onClick={()=>clickHandle(element)} key={i}>
                 <div className='productImg'>
@@ -78,7 +95,7 @@ function Product(){
 
     
         return(<>
-            <div className={"row "+category} id={category}>
+            <div className={"row "+category+" "+(index===0?'fadeIn':'')} id={category}>
                 <div className='subtitle'>
                     <label>{content.subtitle}</label>
                 </div>

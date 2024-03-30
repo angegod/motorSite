@@ -53,9 +53,15 @@
 .row{
     margin-top: 20px;
     position: relative;
-    animation: row_left_fadeIn 1s;
-    transition: 0.5s;
-     
+    opacity: 0;
+    transition: 1s;
+    left:-100%; 
+}
+
+.fadeIn{
+    opacity: 1;
+    left:0%;
+    transition: 1s;
 }
 
 .motorComponent{
@@ -113,19 +119,6 @@ img.down{
     }
 }
 
-@keyframes row_left_fadeIn{
-    0%{
-        left:-100%;
-       
-    }
-    50%{
-        opacity: 0.5s;
-    }
-    100%{
-        left:0%;
-        opacity:1;
-    }
-}
 
 
 

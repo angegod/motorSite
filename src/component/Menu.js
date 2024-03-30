@@ -2,7 +2,7 @@ import React,{useEffect} from 'react';
 import Product from '../component/Product';
 import About from '../component/About';
 
-import {Routes,Route, Link,useLocation} from 'react-router-dom';
+import {Routes,Route, Link,useLocation,createHashRouter,RouterProvider} from 'react-router-dom';
 import App from '../App';
 
 
