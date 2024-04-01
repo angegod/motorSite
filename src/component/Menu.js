@@ -53,7 +53,7 @@ function Menu(){
         </div>
         
         <Routes>
-            <Route path="/Home" element={<App/>} />
+            <Route path="*" element={<App/>} />
             <Route path="/About" element={<About/>} />
             <Route path="/Product" element={<Product/>} />
         </Routes>
