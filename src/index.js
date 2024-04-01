@@ -4,7 +4,7 @@ import './index.css';
 
 import Menu from '../src/component/Menu';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter,createHashRouter,RouterProvider} from 'react-router-dom';
+import { BrowserRouter,HashRouter} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

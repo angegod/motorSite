@@ -29,10 +29,10 @@ function Footer(){
             </div>
             <div>
                 <div className='media'>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" className="fa fa-facebook"></a>
+                    <a href="#" className="fa fa-twitter"></a>
+                    <a href="#" className="fa fa-youtube"></a>
+                    <a href="#" className="fa fa-instagram"></a>
                 </div>
                 <div className='information'>
                     <label>地址:高雄市XXXXXXX路XXX號</label><br/>

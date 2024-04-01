@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import mainstyles from '../src/css/mainpage.module.css';
 import '../src/css/menu.css';
 
@@ -8,6 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
+  
+  useEffect(() => {
+      const getPosts = async () => {
+      const resp = await fetch('https://angegod.github.io/Testapi/product.json');
+      const postsResp = await resp.json();
+      console.log(postsResp.data[0]);
+    };
+     getPosts();
+    }, []);
 
   return (
     <>

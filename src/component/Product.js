@@ -9,7 +9,8 @@ import Footer from './Footer';
 function Product(){
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
-
+    //const [JsonFile,setJsonFile]=useState([]);
+      
 
     function clickHandle(element){
         setMessage(element.productName);
@@ -38,7 +39,7 @@ function Product(){
     }
 
     function BtnList(){
-        const list=JsonFile.map((element,i)=>{
+        const list=JsonFile.data.map((element,i)=>{
             
 
             return(<>
@@ -59,7 +60,9 @@ function Product(){
     }
     
     function SubRow({index,category}){/*一個商品區塊 透過flex能達到自動換行 */
-        var content=JsonFile[index];
+        console.log(JsonFile);
+        var content=JsonFile.data[index];
+        
         
         const lists=content.product.map((element,i)=><>
             <div className='productBox' onClick={()=>clickHandle(element)} key={i}>
