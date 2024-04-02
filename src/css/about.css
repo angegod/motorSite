@@ -10,7 +10,7 @@
 }
 
 .title{
-    width: 30%;
+    width: 50%;
     margin-left:auto;
     margin-right: auto;
     text-align: center;
@@ -43,7 +43,7 @@
 
 .location{
     margin-top: 100px;
-    width: 80%;
+    width: 100%;
     height: auto;
     padding-bottom: 20px;
     display: flex;
@@ -63,11 +63,14 @@
     width: 40%;
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    min-width: 250px;
 }
 
 .contact_details{
     margin-top: 10px;
-    text-align: center;
 }
 
 .contact_details label{
@@ -81,4 +84,21 @@
 .googlemap{
     width: 60%;
     text-align: center;
+    min-width: 350px;
+}
+
+@media(max-width:576px){
+    .location{
+        flex-wrap: wrap;
+    }
+    .location_details{
+        width: 100%;
+    }
+    .googlemap{
+        width: 100%;
+    }
+    .About_main_sections .content{
+        width: 80%;
+    }
+
 }

@@ -18,7 +18,8 @@ function About(){
     return(<>
         <div className='About_main_sections' id="aboutSections">
             <div className='title'>
-                <span style={{color:'red',fontSize:'30px'}}>About 關於我們</span>
+                <span style={{color:'red',fontSize:'30px'}}>About</span><br/>
+                <span style={{color:'red',fontSize:'30px'}}>關於我們</span>
             </div>
             <div className='content'>
                 <span><p>深耕於高雄郊區的一間機車材料行，儘管規模並不像其他業者，但我們秉持的理念始終如一:提供高品質的產品以及優良的售後服務</p></span>
@@ -33,9 +34,9 @@ function About(){
                         <label style={{color:'brown',fontWeight:'bold'}}>高雄本店</label>
                     </div>
                     <div className='contact_details' >
-                        <label>地址:高雄市XXXXXXX路XXX號<i class="fa fa-map-marker" style={{fontSize:'20px'}}></i></label><br/>
-                        <label>電話:07123456789<i class="fa fa-shopping-bag" aria-hidden="true" style={{fontSize:'20px'}}></i></label><br/>
-                        <label>聯絡信箱:abcdefghijk@gmail.com<i class="fa fa-envelope" aria-hidden="true" style={{fontSize:'20px'}}></i></label>
+                        <label><i class="fa fa-map-marker" style={{fontSize:'20px'}}></i>地址:高雄市XXXXXXX路XXX號</label><br/>
+                        <label><i class="fa fa-shopping-bag" aria-hidden="true" style={{fontSize:'20px'}}></i>電話:07123456789</label><br/>
+                        <label><i class="fa fa-envelope" aria-hidden="true" style={{fontSize:'20px'}}></i>信箱:abcdefghijk@gmail.com</label>
                     </div>
                 </div>
                 <div className='googlemap'>
