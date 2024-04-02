@@ -1,7 +1,6 @@
-import React ,{useState} from 'react';
+import React ,{useState,useEffect} from 'react';
 import '../css/product.css';
 import '../css/popup.css';
-import JsonFile from '../json/product1.json';
 import Button from 'react-bootstrap/Button';
 import img1 from '../images/ficon1.webp';
 import Footer from './Footer';
@@ -9,7 +8,20 @@ import Footer from './Footer';
 function Product(){
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
-    //const [JsonFile,setJsonFile]=useState([]);
+    const [JsonFile,setJsonFile]=useState({data:[]});
+
+    useEffect(()=>{
+        fetch('https://angegod.github.io/Testapi/product.json')
+            .then((response) => response.json())
+            .then((responseJson) => {
+                /*console.log(responseJson.data.length);
+                console.log(Json1File);*/
+                setJsonFile(responseJson);
+            })
+            .catch((error) => {
+            console.error(error);
+        });
+    },[setJsonFile])
       
 
     function clickHandle(element){
@@ -39,32 +51,39 @@ function Product(){
     }
 
     function BtnList(){
-        const list=JsonFile.data.map((element,i)=>{
-            
 
-            return(<>
-                <Button variant='primary' onMouseEnter={()=>{scrollDown(element.id)}} onMouseLeave={()=>cancelScrollDown(element.id)}>
-                <a href={'#'+element.id}>
-                    <div style={{width:'46px',height:'46px',overflow:'hidden'}} >
-                        <img src={img1} alt='5555'  style={{position:'relative'}} id={element.id+'icon'}/>
-                    </div>
-                   {element.subtitle}
-                </a>
-                </Button>
-            </>)
-        }
+        if(JsonFile.data.length!==0){
+            const list=JsonFile.data.map((element,i)=>{
+                return(<>
+                    <Button variant='primary' onMouseEnter={()=>{scrollDown(element.id)}} onMouseLeave={()=>cancelScrollDown(element.id)} key={i}>
+                    <a href={'#'+element.id}>
+                        <div style={{width:'46px',height:'46px',overflow:'hidden'}} >
+                            <img src={img1} alt='5555'  style={{position:'relative'}} id={element.id+'icon'}/>
+                            
+                        </div>
+                        {element.subtitle}
+                    </a>
+                    </Button>
+                </>)
+            }
+                
+            )
             
-        )
+            return(<>{list}</>)
+        }else{
+            return(<></>)
+        }
+
         
-        return(<>{list}</>)
     }
     
     function SubRow({index,category}){/*一個商品區塊 透過flex能達到自動換行 */
-        console.log(JsonFile);
-        var content=JsonFile.data[index];
+        
+        if(JsonFile.data.length!==0){
+            var content=JsonFile.data[index];
         
         
-        const lists=content.product.map((element,i)=><>
+            const lists=content.product.map((element,i)=><>
             <div className='productBox' onClick={()=>clickHandle(element)} key={i}>
                 <div className='productImg'>
                     <img src={element.imagesPath} width={250} height={250} alt='555'/>
@@ -80,43 +99,52 @@ function Product(){
 
     
         return(<>
-            <div className={"row "+category+" "+(index===0?'fadeIn':'')} id={category}>
+            <div className={"row "+category+" "+(index===0?'fadeIn':'')} id={category} key={category}>
                 <div className='subtitle'>
                     <label>{content.subtitle}</label>
                 </div>
                 <div className='content'>
                     {lists}
                 </div>
-            </div>
-        </>)
+            </div></>)
+        }else{
+            return(<></>)
+        }
+    
+        
     }
 
-
-    
-    return (<>
-        <div className='Product_main_sections'>
-            <div className='title'>
-                <h2 style={{color:'red',fontWeight:800,textAlign:'center'}}>我們的產品</h2>
-            </div>
-            <div className='buttons_group'>
-                <BtnList/>
-            </div>
-            <SubRow index={0} category={"motorComponent"}/>
-            <SubRow index={1} category={"carComponent"}/>
-            <div className='popup_sections'>
-                <div className='overlay' id="overlay">
-                    <div class='popup'>
-                        <div class='close' onClick={closehandle}>&#10006;</div>
-                        <div className='productName'>{message}</div>
-                        <div className='details'>
-                            <Details/>
+        if(JsonFile.data.length!==0){
+            return (<>
+                <div className='Product_main_sections'>
+                    <div className='title'>
+                        <h2 style={{color:'red',fontWeight:800,textAlign:'center'}}>我們的產品</h2>
+                    </div>
+                    <div className='buttons_group'>
+                        <BtnList/>
+                    </div>
+                    <SubRow index={0} category={"motorComponent"}/>
+                    <SubRow index={1} category={"carComponent"}/>
+                    <div className='popup_sections'>
+                        <div className='overlay' id="overlay">
+                            <div class='popup'>
+                                <div className='close' onClick={closehandle}>&#10006;</div>
+                                <div className='productName'>{message}</div>
+                                <div className='details'>
+                                    <Details/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <Footer/>
-    </>)
+                <Footer/>
+            </>)
+        }else{
+            return(<>Oh no!網站似乎出了問題，建議可以刷新網站重試</>)
+        }
+   
+            
+    
 }
 
 export default Product;

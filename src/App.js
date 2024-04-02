@@ -8,21 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
-  
-  useEffect(() => {
-      const getPosts = async () => {
-      const resp = await fetch('https://angegod.github.io/Testapi/product.json');
-      const postsResp = await resp.json();
-      console.log(postsResp.data[0]);
-    };
-     getPosts();
-    }, []);
-
   return (
     <>
       <div className='app'>
         <div className={mainstyles.header}>
-          
+          <div className={mainstyles.maintext}>
+            <label className={mainstyles.mainLabel}>ABC機車行</label>
+          </div>
         </div>
         <Section type={'about'} reverse={false}/>
         <Section type={'product'} reverse={true}/>

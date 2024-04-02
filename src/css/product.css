@@ -121,6 +121,24 @@ img.down{
         opacity: 1;
     }
 }
+@media(max-width:765px){
+    .productBox{
+        width: 50%;
+    }
+    .row{
+        justify-content: space-evenly;
+    }
+    .productImg{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .productName,.productPrice{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
 
 
 

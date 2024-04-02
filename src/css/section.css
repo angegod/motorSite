@@ -76,3 +76,19 @@
     background-color: inherit;
     color: white;
 }
+
+@media(max-width:476px){
+    .sections{
+        height: 300px;
+    }
+    .left,.right{
+        height: auto;
+    }
+    .left .text,.right .text{
+        margin-top: 50px;
+        font-size: 18px;
+    }
+    .left .button,.right .button{
+        margin-top: 20px;
+    }
+}

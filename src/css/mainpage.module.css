@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    min-height: 300px;
 }
 .menu{
     background-color: black;
@@ -12,4 +13,16 @@
 
 .others{
     height: 500px;
+}
+
+.maintext{
+    width: 100%;
+    text-align: center;
+
+}
+.mainLabel{
+    font-size: 3rem;
+    color: rgb(127, 174, 222);
+    margin-top: 20vw;
+    font-weight: 1rem;
 }

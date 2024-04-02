@@ -10,7 +10,6 @@ function Section({type,reverse}){
             <div className={'sections reverse '+type}>
                 
                 <div className='left'>
-
                 </div>
                 <div className='right'>
                     <div className='text'>
