@@ -121,6 +121,7 @@ img.down{
         opacity: 1;
     }
 }
+
 @media(max-width:765px){
     .productBox{
         width: 50%;
@@ -138,6 +139,23 @@ img.down{
         margin-right: auto;
     }
     
+}
+@media(max-width:500px){
+    .Product_main_sections{
+        width: 90%;
+    }
+    .productBox{
+        min-width: 150px;
+    }
+}
+
+@media(max-width:335px){
+    .productBox{
+        width: 100%;
+    }
+    .subtitle{
+        text-align: center;
+    }
 }
 
 

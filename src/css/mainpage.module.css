@@ -7,6 +7,7 @@
     background-size: cover;
     min-height: 300px;
     background-blend-mode: multiply;
+    padding-bottom: 20px;
 }
 .menu{
     background-color: black;
@@ -20,6 +21,7 @@
     width: 100%;
     text-align: center;
     height: 50vw;
+    
 
 }
 .mainLabel label{
@@ -27,6 +29,7 @@
     color: rgb(127, 174, 222);
     margin-top: 20vw;
     font-weight: 1rem;
+    
 }
 .mainLabel p{
     width: 70%;
@@ -40,6 +43,7 @@
     font-size: 1.5rem;
     color: aliceblue;
     text-align: center;
+    
 }
 
 
