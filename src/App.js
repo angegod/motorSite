@@ -13,7 +13,10 @@ function App() {
       <div className='app'>
         <div className={mainstyles.header}>
           <div className={mainstyles.maintext}>
-            <label className={mainstyles.mainLabel}>ABC機車行</label>
+            <div className={mainstyles.mainLabel}>
+              <label>ABC機車行</label><br/>
+              <p><span>我們致力於提供最高品質的產品給顧客，讓顧客滿意是我們的宗旨之一</span></p>
+            </div>
           </div>
         </div>
         <Section type={'about'} reverse={false}/>

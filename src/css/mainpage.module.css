@@ -1,11 +1,12 @@
 .header{
     width: 100%;
     height:50vw;
-    background-image: url('../images/main1.jpg');
+    background: url('../images/main1.jpg'),rgb(118, 115, 115);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     min-height: 300px;
+    background-blend-mode: multiply;
 }
 .menu{
     background-color: black;
@@ -18,11 +19,34 @@
 .maintext{
     width: 100%;
     text-align: center;
+    height: 50vw;
 
 }
-.mainLabel{
+.mainLabel label{
     font-size: 3rem;
     color: rgb(127, 174, 222);
     margin-top: 20vw;
     font-weight: 1rem;
+}
+.mainLabel p span{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+@media(max-width:476px){
+    .mainLabel label{
+        font-size: 2.5rem;
+    }
+    .mainLabel p span{
+        font-size: 1.2rem;
+    }
+    .mainLabel p{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
