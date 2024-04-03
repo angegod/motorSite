@@ -16,6 +16,7 @@ function App() {
             <div className={mainstyles.mainLabel}>
               <label>ABC機車行</label><br/>
               <p><span>我們致力於提供最高品質的產品給顧客，讓顧客滿意是我們的宗旨之一</span></p>
+              <p><span>#此網站之任何創作內容均為學習用途，無商業目的</span></p>
             </div>
           </div>
         </div>
