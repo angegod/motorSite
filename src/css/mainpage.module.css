@@ -28,6 +28,12 @@
     margin-top: 20vw;
     font-weight: 1rem;
 }
+.mainLabel p{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .mainLabel p span{
     margin-left: auto;
     margin-right: auto;
@@ -44,11 +50,7 @@
     .mainLabel p span{
         font-size: 1.2rem;
     }
-    .mainLabel p{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    
 }
 
 /*px是絕對單位 em會根據父物件的長度來做計算，會累乘*/

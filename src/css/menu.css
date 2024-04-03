@@ -11,7 +11,7 @@
     margin-top: 40px;
 }
 .menu ul li a{
-    color: silver;
+    color: rgb(127, 174, 222);
     font-size: 20px;
     font-weight: 800;
 }
@@ -23,7 +23,7 @@
 }
 
 .menu.whites ul li a{
-    color: black; 
+    color: silver; 
     transition: 0.5s linear;
 }
 
