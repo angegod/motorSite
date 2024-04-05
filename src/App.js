@@ -7,6 +7,18 @@ import Footer from './component/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  useEffect(()=>{
+    fetch('https://api.mihomo.me/sr_info/805268077')
+    .then((res)=>{
+      console.log(res.json());
+    })
+    .then((result)=>{
+      console.log(result);
+    });
+
+
+  },[])
   
   return (
     <>

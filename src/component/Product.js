@@ -22,7 +22,6 @@ function Product(){
             console.error(error);
         });
     },[setJsonFile])
-      
 
     function clickHandle(element){
         setMessage(element.productName);
