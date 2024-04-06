@@ -9,7 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   useEffect(()=>{
-    fetch('https://api.mihomo.me/sr_info/805268077')
+    fetch('https://api.mihomo.me/sr_info/805268077',{
+      method: "GET", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache:"no-cache",
+      headers: {
+        "Accept":"application/json"       
+      }
+    })
     .then((res)=>{
       console.log(res.json());
     })
