@@ -33,10 +33,10 @@
 }
 
 .left{
-    background: linear-gradient(90deg,transparent,80%,rgb(90, 56, 225));
+    background: linear-gradient(90deg,transparent,80%,rgb(56, 54, 64));
 }
 .right{
-    background:linear-gradient(90deg,rgb(90, 56, 225),60%,rgb(145, 140, 140));
+    background:linear-gradient(90deg,rgb(56, 54, 64),60%,rgb(145, 140, 140));
 }
 
 .sections.reverse .left{

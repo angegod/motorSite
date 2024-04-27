@@ -9,24 +9,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   useEffect(()=>{
-    fetch('https://api.mihomo.me/sr_info/805268077',{
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache:"no-cache",
-      headers: {
-        "Accept":"application/json"       
-      }
-    })
-    .then((res)=>{
-      console.log(res.json());
-    })
-    .then((result)=>{
-      console.log(result);
-    });
-
-
+    fetch('http://localhost:5000/get')
+            .then((response) => response.json())
+            .then((responseJson) => {
+                console.log(responseJson);
+                //console.log(Json1File);*/
+                //setJsonFile(responseJson);
+            })
+            .catch((error) => {
+            console.error(error);
+        });
   },[])
-  
   return (
     <>
       <div className='app'>
