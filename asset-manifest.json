@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/motorSite/static/css/main.0524fd94.css",
-    "main.js": "/motorSite/static/js/main.d0999540.js",
+    "main.css": "/motorSite/static/css/main.d6637bef.css",
+    "main.js": "/motorSite/static/js/main.653fb94f.js",
     "static/js/453.b6875f92.chunk.js": "/motorSite/static/js/453.b6875f92.chunk.js",
     "static/media/main1.jpg": "/motorSite/static/media/main1.450a005ba229a7a9c07d.jpg",
     "index.html": "/motorSite/index.html",
     "static/media/ficon1.webp": "/motorSite/static/media/ficon1.d5b93e4cfdf9b100ec6a.webp",
-    "main.0524fd94.css.map": "/motorSite/static/css/main.0524fd94.css.map",
-    "main.d0999540.js.map": "/motorSite/static/js/main.d0999540.js.map",
+    "main.d6637bef.css.map": "/motorSite/static/css/main.d6637bef.css.map",
+    "main.653fb94f.js.map": "/motorSite/static/js/main.653fb94f.js.map",
     "453.b6875f92.chunk.js.map": "/motorSite/static/js/453.b6875f92.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0524fd94.css",
-    "static/js/main.d0999540.js"
+    "static/css/main.d6637bef.css",
+    "static/js/main.653fb94f.js"
   ]
 }
