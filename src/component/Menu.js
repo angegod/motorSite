@@ -6,8 +6,6 @@ import {Routes,Route, Link} from 'react-router-dom';
 import App from '../App';
 
 
-
-
 function Menu(){
     
     window.onscroll=function(){

@@ -54,14 +54,11 @@ function Product(){
         if(JsonFile.data.length!==0){
             const list=JsonFile.data.map((element,i)=>{
                 return(<>
-                    <Button variant='primary' onMouseEnter={()=>{scrollDown(element.id)}} onMouseLeave={()=>cancelScrollDown(element.id)} key={i}>
+                    <Button variant='primary' key={i}>
                     <a href={'#'+element.id}>
-                        <div style={{width:'46px',height:'46px',overflow:'hidden'}} >
-                            <img src={img1} alt='5555'  style={{position:'relative'}} id={element.id+'icon'}/>
-                            
-                        </div>
-                        {element.subtitle}
+                        <span>{element.subtitle}</span>
                     </a>
+                    
                     </Button>
                 </>)
             }
@@ -85,7 +82,7 @@ function Product(){
             const lists=content.product.map((element,i)=><>
             <div className='productBox' onClick={()=>clickHandle(element)} key={i}>
                 <div className='productImg'>
-                    <img src={element.imagesPath} width={250} height={250} alt='555'/>
+                    <img src={element.imagesPath} width={250} height={250} alt='555' />
                 </div>
                 <div className='productName'>
                     <span>{element.productName}</span>
@@ -117,7 +114,8 @@ function Product(){
             return (<>
                 <div className='Product_main_sections'>
                     <div className='title'>
-                        <h2 style={{color:'red',fontWeight:800,textAlign:'center'}}>我們的產品</h2>
+                        <span style={{color:'red',fontSize:'30px'}}>Product</span>
+                        <h2 style={{color:'red',textAlign:'center'}}>我們的產品</h2>
                     </div>
                     <div className='buttons_group'>
                         <BtnList/>

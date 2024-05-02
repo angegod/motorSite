@@ -3,12 +3,24 @@ import Product from '../component/Product';
 import App from '../App';
 import {Routes,Route, Link} from 'react-router-dom';
 import '../css/Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from 'react-bootstrap/Button';
+import img1 from '../images/ficon1.webp';
+import img2 from '../images/ficon2.webp';
+import img3 from '../images/ficon3.webp';
 
 
 function Footer(){
     
+    function scrollDown(id){
+        var ImgNode=document.getElementById('icon'+id);
+        ImgNode.classList.add('down');
+    }
 
+    function cancelScrollDown(id){
+        var ImgNode=document.getElementById('icon'+id);
+        ImgNode.classList.remove('down');
+    }
     
     return(<>
         <div className='footer'>
@@ -29,10 +41,29 @@ function Footer(){
             </div>
             <div>
                 <div className='media'>
-                    <a href="#" className="fa fa-facebook"></a>
-                    <a href="#" className="fa fa-twitter"></a>
-                    <a href="#" className="fa fa-youtube"></a>
-                    <a href="#" className="fa fa-instagram"></a>
+                    <div className='media_image'>
+                        <a href={'#'} onMouseEnter={()=>{scrollDown('1')}} onMouseLeave={()=>cancelScrollDown('1')}>
+                            <div style={{width:'46px',height:'45px',overflow:'hidden'}} >
+                                <img src={img1} alt='5555'  style={{position:'relative'}} id={'icon1'}/>   
+                            </div>
+                        </a>
+                    </div>
+                    <div className='media_image'>
+                        <a href={'#'} onMouseEnter={()=>{scrollDown('2')}} onMouseLeave={()=>cancelScrollDown('2')}>
+                            <div style={{width:'46px',height:'45px',overflow:'hidden'}} >
+                                <img src={img2} alt='5555'  style={{position:'relative'}} id={'icon2'}/>
+                            
+                            </div>
+                        </a>
+                    </div>
+                    <div className='media_image'>
+                        <a href={'#'} onMouseEnter={()=>{scrollDown('3')}} onMouseLeave={()=>cancelScrollDown('3')}>
+                            <div style={{width:'46px',height:'45px',overflow:'hidden'}} >
+                                <img src={img3} alt='5555'  style={{position:'relative'}} id={'icon3'}/>
+                            </div>
+                        </a>
+                    </div>
+                    
                 </div>
                 <div className='information'>
                     <label>地址:高雄市XXXXXXX路XXX號</label><br/>

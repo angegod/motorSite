@@ -45,13 +45,22 @@
     color: red;
 }
 .productImg{
+    border-radius: 15px;
     width: 150px;
     height: 250px;
     overflow: hidden;
+    transition: transform 0.2s linear;
 }
+/*圖片原地放大*/
+.productImg:hover{
+    transform: scale(1.05);
+}
+
 .productImg img{
     margin-left: -50px;
 }
+
+
 
 .row{
     margin-top: 20px;
@@ -87,7 +96,7 @@ button a{
     border: gray;
     background-color: gray;
     margin-right: 10px;
-    background: linear-gradient(to left, red 50%, #0d6efd 50%) right;
+    background: linear-gradient(to left, #515152 50%,red 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
 }

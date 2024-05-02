@@ -33,14 +33,17 @@
 }
 
 .left{
-    background: linear-gradient(90deg,transparent,80%,rgb(56, 54, 64));
+    background: linear-gradient(90deg,transparent,80%,rgb(56, 54, 64,0.8));
 }
 .right{
-    background:linear-gradient(90deg,rgb(56, 54, 64),60%,rgb(145, 140, 140));
+    background:linear-gradient(90deg,rgb(56, 54, 64,0.8),60%,rgb(145, 140, 140));
+}
+.sections.reverse .right{
+    background:linear-gradient(90deg,rgb(56, 54, 64),60%,rgb(145, 140, 140,0.8));
 }
 
 .sections.reverse .left{
-    background:linear-gradient(90deg,rgb(145,140,140),20%,transparent);
+    background:linear-gradient(90deg,rgb(145,140,140,0.8),20%,transparent);
 }
 
 .text{
