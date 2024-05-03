@@ -26,7 +26,7 @@ function Footer(){
         <div className='footer'>
             <div className='navbar'>
                 <ul>
-                    <li><Link to="/Home">主頁</Link></li>
+                    <li><Link to="/">主頁</Link></li>
                     <li><Link to="/About">關於我們</Link></li>
                     <li><Link to="/Product">產品</Link></li>
                 </ul>
@@ -36,10 +36,7 @@ function Footer(){
                 <Route path="/About" element={<><label>4555555</label></>} />
                 <Route path="/Product" element={<Product/>} />
             </Routes>
-            <div className='space'>
-
-            </div>
-            <div>
+            <div style={{width:'20%',marginLeft:'auto',marginRight:'auto'}}>
                 <div className='media'>
                     <div className='media_image'>
                         <a href={'#'} onMouseEnter={()=>{scrollDown('1')}} onMouseLeave={()=>cancelScrollDown('1')}>

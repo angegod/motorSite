@@ -13,11 +13,15 @@
 
 .navbar,.space,.media{
     margin: 20px 0px;
-    width: 30%;
+    width: 50%;
     /*border-right:1px gray solid; */
+}
+.navbar{
+    justify-content: center;
 }
 
 .navbar ul li a{
+    font-size: 16px;
     color: rgb(239, 231, 231);
 }
 .navbar ul{
