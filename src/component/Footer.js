@@ -36,7 +36,7 @@ function Footer(){
                 <Route path="/About" element={<><label>4555555</label></>} />
                 <Route path="/Product" element={<Product/>} />
             </Routes>
-            <div style={{width:'20%',marginLeft:'auto',marginRight:'auto'}}>
+            <div>
                 <div className='media'>
                     <div className='media_image'>
                         <a href={'#'} onMouseEnter={()=>{scrollDown('1')}} onMouseLeave={()=>cancelScrollDown('1')}>
