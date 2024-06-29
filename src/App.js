@@ -8,18 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  useEffect(()=>{
-    fetch('http://localhost:5000/get')
-            .then((response) => response.json())
-            .then((responseJson) => {
-                console.log(responseJson);
-                //console.log(Json1File);*/
-                //setJsonFile(responseJson);
-            })
-            .catch((error) => {
-            console.error(error);
-        });
-  },[])
+ 
   return (
     <>
       <div className='app'>

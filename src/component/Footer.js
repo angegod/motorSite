@@ -63,8 +63,8 @@ function Footer(){
                     
                 </div>
                 <div className='information'>
-                    <label>地址:高雄市XXXXXXX路XXX號</label><br/>
-                    <label>電話:07123456789</label>
+                    <span>地址:高雄市XXXXXXX路XXX號</span><br/>
+                    <span>電話:07123456789</span>
                 </div>
             </div>
             
