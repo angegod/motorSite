@@ -4,24 +4,25 @@ import '../css/popup.css';
 import Button from 'react-bootstrap/Button';
 import img1 from '../images/ficon1.webp';
 import Footer from './Footer';
+import JsonFile from '../json/product1.json';
 
 function Product(){
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
-    const [JsonFile,setJsonFile]=useState({data:[]});
-
-    useEffect(()=>{
-        fetch('https://angegod.github.io/Testapi/product.json')
+    //const [JsonFile,setJsonFile]=useState({data:[]});
+    console.log(JsonFile)
+    /*useEffect(()=>{
+        fetch('https://angegod.github.io/Testapi/product1.json')
             .then((response) => response.json())
             .then((responseJson) => {
-                /*console.log(responseJson.data.length);
-                console.log(Json1File);*/
+                console.log(responseJson.data.length);
+                //console.log(Json1File);
                 setJsonFile(responseJson);
             })
             .catch((error) => {
             console.error(error);
         });
-    },[setJsonFile])
+    },[setJsonFile])*/
 
     function clickHandle(element){
         setMessage(element.productName);
@@ -61,9 +62,7 @@ function Product(){
                     
                     </Button>
                 </>)
-            }
-                
-            )
+            })
             
             return(<>{list}</>)
         }else{
@@ -82,7 +81,7 @@ function Product(){
             const lists=content.product.map((element,i)=><>
             <div className='productBox' onClick={()=>clickHandle(element)} key={i}>
                 <div className='productImg'>
-                    <img src={element.imagesPath} width={250} height={250} alt='555' />
+                    <img src={'https://angegod.github.io/Testapi'+element.imagesPath} width={250} height={250} alt='555' />
                 </div>
                 <div className='productName'>
                     <span>{element.productName}</span>
