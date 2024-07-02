@@ -4,14 +4,14 @@ import '../css/popup.css';
 import Button from 'react-bootstrap/Button';
 import img1 from '../images/ficon1.webp';
 import Footer from './Footer';
-import JsonFile from '../json/product1.json';
+//import JsonFile from '../json/product1.json';
 
 function Product(){
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
-    //const [JsonFile,setJsonFile]=useState({data:[]});
+    const [JsonFile,setJsonFile]=useState({data:[]});
     console.log(JsonFile)
-    /*useEffect(()=>{
+    useEffect(()=>{
         fetch('https://angegod.github.io/Testapi/product1.json')
             .then((response) => response.json())
             .then((responseJson) => {
@@ -22,7 +22,7 @@ function Product(){
             .catch((error) => {
             console.error(error);
         });
-    },[setJsonFile])*/
+    },[setJsonFile])
 
     function clickHandle(element){
         setMessage(element.productName);
