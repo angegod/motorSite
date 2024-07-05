@@ -9,20 +9,6 @@ import JsonFile from '../json/product1.json';
 function Product(){
     const [message,setMessage]=useState('');
     const [details,setDetails]=useState([]);
-    /*const [JsonFile,setJsonFile]=useState({data:[]});
-    console.log(JsonFile)
-    useEffect(()=>{
-        fetch('https://angegod.github.io/Testapi/product1.json')
-            .then((response) => response.json())
-            .then((responseJson) => {
-                console.log(responseJson.data.length);
-                //console.log(Json1File);
-                setJsonFile(responseJson);
-            })
-            .catch((error) => {
-            console.error(error);
-        });
-    },[setJsonFile])*/
 
     function clickHandle(element){
         setMessage(element.productName);
