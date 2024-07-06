@@ -25,9 +25,9 @@ function App() {
         <Section type={'product'} reverse={true}/>
         <Footer/>
         <SEO title='React 機車行網站' description='Ange Website' url='https://angegod.github.io/motorSite/'>
-          <meta name="description" content='測試 content 1' />
-          <meta name="description" content='測試 content 2' />
-          <meta name="description" content='測試 content 3' />
+          <meta name="description" content='Angegod網站' />
+          <meta name="description" content='現代化網站' />
+          <meta name="description" content='githubpages trial' />
         </SEO>
       </div>
 
