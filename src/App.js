@@ -1,7 +1,7 @@
 import React ,{useEffect}from 'react';
 import mainstyles from '../src/css/mainpage.module.css';
 import '../src/css/menu.css';
-
+import SEO from './component/SEO';
 import Section from './component/Section';
 import Footer from './component/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +24,13 @@ function App() {
         <Section type={'about'} reverse={false}/>
         <Section type={'product'} reverse={true}/>
         <Footer/>
+        <SEO title='React 機車行網站' description='Ange Website' url='http://localhost:3000/motorSite'>
+          <meta name="description" content='測試 content 1' />
+          <meta name="description" content='測試 content 2' />
+          <meta name="description" content='測試 content 3' />
+        </SEO>
       </div>
+
       
     </>
   );
