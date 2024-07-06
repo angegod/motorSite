@@ -24,7 +24,7 @@ function App() {
         <Section type={'about'} reverse={false}/>
         <Section type={'product'} reverse={true}/>
         <Footer/>
-        <SEO title='React 機車行網站' description='Ange Website' url='http://localhost:3000/motorSite'>
+        <SEO title='React 機車行網站' description='Ange Website' url='https://angegod.github.io/motorSite/'>
           <meta name="description" content='測試 content 1' />
           <meta name="description" content='測試 content 2' />
           <meta name="description" content='測試 content 3' />
